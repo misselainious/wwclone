@@ -1,0 +1,32 @@
+.banner {
+    color: whitesmoke !important;
+    text-align: center !important;
+}
+
+.chosenProducers {
+    color: rgba(148, 141, 141, 0.795) !important;
+    background-color: rgba(120, 135, 167, 0.192) !important;
+    font-size: 30px !important;
+    text-align: center !important;
+}
+
+.desc {
+font-size: 1.2em !important;
+text-align: center !important;
+}
+
+.linked {
+    color: rgb(59, 78, 27) !important;
+    text-decoration: underline;
+    font-weight: lighter !important;
+}
+
+.toplinked {
+    color:white !important;
+    font-size: 1.6em !important;
+    /* text-decoration: underline; */
+    font-weight: lighter !important;
+}
+.bottom {
+    background-color: rgba(128, 128, 128, 0.308) !important;
+}

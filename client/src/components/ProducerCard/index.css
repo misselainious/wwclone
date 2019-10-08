@@ -1,0 +1,9 @@
+.prodcard{
+    margin: 55px;
+}
+.card:hover{
+    background-color: #f2efef !important;
+}
+.seeAllWinesText{
+    font-size: 1.1em;
+}
