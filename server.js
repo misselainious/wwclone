@@ -7,47 +7,8 @@ const routes = require("./routes");
 require('dotenv').config()
 
 
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = process.env.ATLAS_URI;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//  // perform actions on the collection object
-//   client.close();
-// });
-
-
-// MongoClient.connect(uri, function(err, db) {
-//   db.close();
-// });
-
-
-// if(process.env.LOCAL || process.env.MONGODB_URI) {
-//   mongoose.connect(process.env.LOCAL || process.env.MONGODB_URI, { useNewUrlParser: true });
-// } else {
-//   console.log("MongoDB connection string not defined!");
-// }
-
-
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = process.env.ATLAS_URI;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
-
-
-// (mongoose.connect( process.env.LOCAL, { useNewUrlParser: true }));
-// mongoose.connection.on("open", function (ref) {
-//   console.log("Connected to mongo server.");
-// });
-// mongoose.connection.on('error', function (err) { console.log(err) });
-
-// // Connect to the Mongo DB
-mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { useNewUrlParser: true });
+// // Connect to the Atlas
+mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { dbName: 'wwcluster', useNewUrlParser: true });
 mongoose.connection.on("open", function (ref) {
   console.log("Connected to mongo server.");
 });
