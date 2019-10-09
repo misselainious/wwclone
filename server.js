@@ -33,6 +33,11 @@ require('dotenv').config()
 //    client.close();
 // });
 
+// mongoose.connect( process.env.LOCAL );
+// mongoose.connection.on("open", function (ref) {
+//   console.log("Connected to mongo server.");
+// });
+// mongoose.connection.on('error', function (err) { console.log(err) });
 
 // // Connect to the Atlas
 mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
