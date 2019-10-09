@@ -7,12 +7,24 @@ const routes = require("./routes");
 require('dotenv').config()
 
 
-// // Connect to the Atlas
-mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
-mongoose.connection.on("open", function (ref) {
-  console.log("Connected to mongo server.");
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = process.env.ATLAS_URI;
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("wwatlasDB").collection("wino");
+  console.log("iz working. Cats.");
+  // perform actions on the collection object
+  client.close();
 });
-mongoose.connection.on('error', function (err) { console.log(err) });
+
+
+// // Connect to the Atlas
+// mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
+// mongoose.connection.on("open", function (ref) {
+//   console.log("Connected to mongo server.");
+// });
+// mongoose.connection.on('error', function (err) { console.log(err) });
 
 
 
