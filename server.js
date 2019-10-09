@@ -12,11 +12,26 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.ATLAS_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-  const collection = client.db("wwatlasDB").collection("wino");
+  const producerList = client.db("wwatlasDB").collection("producerList");
+  const wineList = client.db("wwatlasDB").collection("wineList");
   console.log("iz working. Cats.");
   // perform actions on the collection object
   client.close();
 });
+
+// const MongoClient = require('mongodb').MongoClient;
+
+// // replace the uri string with your connection string.
+// const uri = process.env.ATLAS_URI;
+// MongoClient.connect(uri, function(err, client) {
+//    if(err) {
+//         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+//    }
+//    console.log('Connected...');
+//    const collection = client.db("wwatlasDB").collection("wineList");
+//    // perform actions on the collection object
+//    client.close();
+// });
 
 
 // // Connect to the Atlas
