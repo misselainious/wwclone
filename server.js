@@ -7,40 +7,8 @@ const routes = require("./routes");
 require('dotenv').config()
 
 
-
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = process.env.ATLAS_URI;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//   const Producer = client.db("wwatlasDB").collection("producerList");
-//   const Wine = client.db("wwatlasDB").collection("wineList");
-//   console.log("iz working. Cats.");
-//   // perform actions on the collection object
-//   client.close();
-// });
-
-// const MongoClient = require('mongodb').MongoClient;
-
-// // replace the uri string with your connection string.
-// const uri = process.env.ATLAS_URI;
-// MongoClient.connect(uri, function(err, client) {
-//    if(err) {
-//         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
-//    }
-//    console.log('Connected...');
-//    const collection = client.db("wwatlasDB").collection("wineList");
-//    // perform actions on the collection object
-//    client.close();
-// });
-
-// mongoose.connect( process.env.LOCAL );
-// mongoose.connection.on("open", function (ref) {
-//   console.log("Connected to mongo server.");
-// });
-// mongoose.connection.on('error', function (err) { console.log(err) });
-
 // // Connect to the Atlas
-mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: '' || 'wwatlasDB' });
+mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { useNewUrlParser: true, dbName: '' || 'wwatlasDB' });
 mongoose.connection.on("open", function (ref) {
   console.log("Connected to mongo server.");
 });
