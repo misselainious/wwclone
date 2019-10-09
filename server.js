@@ -8,7 +8,7 @@ require('dotenv').config()
 
 
 // // Connect to the Atlas
-mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
+mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
 mongoose.connection.on("open", function (ref) {
   console.log("Connected to mongo server.");
 });
