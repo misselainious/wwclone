@@ -40,13 +40,21 @@ require('dotenv').config()
 // mongoose.connection.on('error', function (err) { console.log(err) });
 
 // // Connect to the Atlas
-mongoose.connect( process.env.LOCAL || process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
-mongoose.connection.on("open", function (ref) {
+// mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' });
+// mongoose.connection.on("open", function (ref) {
+//   console.log("Connected to mongo server.");
+// });
+// mongoose.connection.on('error', function (err) { console.log(err) });
+
+if(process.env.LOCAL) {
+  mongoose.connect( process.env.LOCAL );
+ } else {
+  mongoose.connect( process.env.ATLAS_URI, { useNewUrlParser: true, dbName: 'wwatlasDB' } );
+ }
+ mongoose.connection.on("open", function (ref) {
   console.log("Connected to mongo server.");
-});
-mongoose.connection.on('error', function (err) { console.log(err) });
-
-
+ });
+ mongoose.connection.on('error', function (err) { console.log(err) });
 
 
 // require("./models/wine");
