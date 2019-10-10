@@ -33,7 +33,7 @@ class Feature extends Component {
   };
 
   defaultSrc(ev){
-    ev.target.src = '/images/StockRED.png'
+    ev.target.src = '../../images/StockRED.png'
   }
 
   render() {

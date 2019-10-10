@@ -74,7 +74,7 @@ if (token) {
 
 
   defaultSrc(ev){
-    ev.target.src = '/images/StockRED.png'
+    ev.target.src = '../../images/StockRED.png'
   }
 
 render() {
