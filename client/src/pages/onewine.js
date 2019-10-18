@@ -142,7 +142,7 @@ render() {
   <Grid.Row style={{margin: '20px'}}>
     <Grid.Column>
 
-  <Image onError={this.defaultSrc} src={`https://winewiseassets.s3-us-west-1.amazonaws.com/${this.state.wine.Code}.png`} size='large'/>
+  <Image onError={this.defaultSrc} src={`https://s3.us-west-1.wasabisys.com/wwassets/bottles/${this.state.wine.Code}.png`} size='large'/>
 
 {/* Tech Sheet */}
 { validSheet &&
@@ -240,7 +240,7 @@ render() {
 
  <Grid.Column width={3}>
 {/* Renders Photo of wine */}
-  <Image onError={this.defaultSrc}  src={`https://winewiseassets.s3-us-west-1.amazonaws.com/${this.state.wine.Code}.png`} size='large'/>         
+  <Image onError={this.defaultSrc}  src={`https://s3.us-west-1.wasabisys.com/wwassets/bottles/${this.state.wine.Code}.png`} size='large'/>         
  
 
 {/* CORNER LABELS */}

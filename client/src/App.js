@@ -18,7 +18,7 @@ import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
 import Hiram from "./pages/hiram";
 import Greenwood from "./pages/greenwood";
-import EventsTable from "./pages/events";
+// import EventsTable from "./pages/events";
 import "./App.css";
 
 
@@ -89,7 +89,7 @@ const PageSwitch = props => {
       <Route path="/hiram" component={Hiram} />
       <Route path="/greenwood" component={Greenwood} />
       <Route path="/login" component={Login}/>
-      <Route path="/events" component={EventsTable}/>
+      {/* <Route path="/events" component={EventsTable}/> */}
       <Route path="*" component={ErrorPage} />
     </Switch>
   )

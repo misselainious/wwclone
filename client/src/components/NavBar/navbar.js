@@ -50,17 +50,17 @@ const FixedMenuLayout = () => (
         
 
                {/* Trade Button */}
-        <Menu.Item position='right' style={{marginRight:'10px'}} >
+        {/* <Menu.Item position='right' style={{marginRight:'10px'}} >
         <Link to="/events" onClick={scrollToTop}>
         <Button style={{ backgroundColor: '#f5f595'}}>
         <i className="star outline"></i> Champagne Trade Tasting
           </Button> 
           </Link>
-          </Menu.Item>
+          </Menu.Item> */}
 
 
         {/* Trade Button */}
-        <Menu.Item position='center' style={{marginRight:'10px'}} >
+        <Menu.Item position='right' style={{marginRight:'10px'}} >
         <Link to="/admin" onClick={scrollToTop}>
         <Button>
         <i className="dolly icon"></i> For the Trade

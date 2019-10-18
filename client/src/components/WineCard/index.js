@@ -18,7 +18,7 @@ render(){
   
     <Card className="card" >
 
-    <Image onError={this.defaultSrc} className="cardImage" src={`https://winewiseassets.s3-us-west-1.amazonaws.com/${this.props.Code}.png`}/>
+    <Image onError={this.defaultSrc} className="cardImage" src={`https://s3.us-west-1.wasabisys.com/wwassets/bottles/${this.props.Code}.png`}/>
 
   
  {/* CORNER LABELS */}

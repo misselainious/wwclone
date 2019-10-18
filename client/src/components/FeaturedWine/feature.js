@@ -68,7 +68,7 @@ class Feature extends Component {
           </p>
     
          <Grid.Column floated='right' width={6}>
-          <Image style={{marginLeft:'auto', marginRight:'auto' }} bordered rounded size='medium'onError={this.defaultSrc} className="cardImage" src={`https://winewiseassets.s3-us-west-1.amazonaws.com/${code}.png`} />
+          <Image style={{marginLeft:'auto', marginRight:'auto' }} bordered rounded size='medium'onError={this.defaultSrc} className="cardImage" src={`https://s3.us-west-1.wasabisys.com/wwassets/bottles/${code}.png`} />
           <Link to={"/details/" + pageLink} >
             <Button className="seeAllWinesBtn" style={{ display: 'block', marginRight: 'auto', marginLeft: 'auto', color: '#962d2d', marginTop:'15px' }} size='small'>
             <p className="seeAllWinesText">View Wine</p>
