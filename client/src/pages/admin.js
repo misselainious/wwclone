@@ -10,7 +10,9 @@ import {
   Button,
   Message,
   Table,
-  Icon
+  Icon,
+  Image,
+  Header
 } from 'semantic-ui-react';
 
 
@@ -178,6 +180,14 @@ class Admin extends Component {
     </Table.Body>
   </Table>
 
+  </Grid.Column>
+</Grid.Row>
+<Grid.Row>
+  <Grid.Column>
+    <Header textAlign="center" as="h3">Pay with Credit or ACH using: </Header>
+  <a href = "https://melio.me/WineWise" target = "_blank" rel="noopener noreferrer">
+    <Image centered src="../images/cf4ba8206a453cfb509a77ea35e546bc.png" size="tiny" style={{padding: "7px", backgroundColor: "#7b4dfe"}}></Image>
+  </a>
   </Grid.Column>
 </Grid.Row>
 

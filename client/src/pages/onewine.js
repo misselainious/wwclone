@@ -87,6 +87,8 @@ render() {
     let techSheet;
     let validSheet= true;
 
+    // techSheet = (`https://s3.us-west-1.wasabisys.com/wwassets/techsheets/Tech_${this.state.pdfcode}.pdf`)
+
     if(isLoaded){
       try{
   techSheet = require(`../TechSheets/Tech_${this.state.pdfcode}.pdf`)
