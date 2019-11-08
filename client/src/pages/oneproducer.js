@@ -3,6 +3,7 @@ import API from "../utils/API";
 import { Grid, Table, List, Header, Responsive, Segment, Embed} from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 import OneProdBtn from "../components/AllProducersBtn/index"
+import Press from "../components/Press/press"
 
 class OneProducer extends Component {
   state = {
@@ -121,6 +122,17 @@ render() {
     </Grid.Row>
     }
 
+{/* Press Section */}
+ { this.state.producer.Press && 
+  <Grid.Row>
+    <Grid.Column width={10}>
+    <Press />
+    </Grid.Column>
+    
+  </Grid.Row>
+  }
+
+
  </Grid>
 </Responsive>
 
@@ -205,10 +217,17 @@ render() {
 
 </Grid.Row>
          
-<OneProdBtn />
+{/* <OneProdBtn /> */}
 
-
-
+{/* Press Section */}
+{ this.state.producer.Press && 
+<Grid.Row>
+  <Grid.Column width={10}>
+  <Press />
+  </Grid.Column>
+  
+</Grid.Row>
+}
 
     </Grid>
     </Responsive>   

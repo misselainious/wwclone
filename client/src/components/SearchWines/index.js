@@ -10,19 +10,24 @@ export default class SearchBar extends Component {
 
     state = {
         wines: [],
-        list: []
+        list: [],
+        searchcriterea: []
     }
 
   componentDidMount() {
     this.resetComponent();
     API.getWines()
       .then(res => {
-        this.setState({ wines: res.data }) 
+        this.setState({ wines: res.data })
       }
       )
       .catch(err => console.log(err));
   }
 
+  setCriterea = () => {
+    this.setState( { searchcriterea: this.state.wines.Code  })
+    console.log(this.state.searchcriterea);
+  }
   resetComponent = () =>
     this.setState({ isLoading: false, wines: [], value: "" });
 
@@ -41,7 +46,6 @@ export default class SearchBar extends Component {
     
   setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent();
-
       const re = new RegExp(_.escapeRegExp(this.state.value), "i");
       //what is being tested for in search input
       const isMatch = result => re.test(result.Wine);
