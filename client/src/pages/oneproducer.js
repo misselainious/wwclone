@@ -8,7 +8,8 @@ import Press from "../components/Press/press"
 class OneProducer extends Component {
   state = {
     producer: {},
-    wines: []
+    wines: [],
+    press: []
   };
   removeUnderscores(myString){
     return myString.split("_").join(" ")
@@ -17,7 +18,7 @@ class OneProducer extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     API.getProducer(this.props.match.params.id)
-      .then(res => this.setState({ producer: res.data }))
+      .then(res => this.setState({ producer: res.data, press: res.data.Press1 }))
       .then(   
     API.getWines()
       .then(res => {
@@ -73,7 +74,7 @@ render() {
        
         {
             producerObjKeys.map(key => 
-                    producer[key] && key !== 'List_Notes' && key !== 'Order' &&<Table.Row key={key}>
+                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press1' && key !== 'Press2' && key !== 'Press3' && key !== 'YouTube' &&<Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{producer[key]}</Table.Cell>
                     </Table.Row>
@@ -167,7 +168,7 @@ render() {
          <Table.Body>
         {
             producerObjKeys.map(key => 
-                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'YouTube' && <Table.Row key={key}>
+                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press1' && key !== 'Press2' && key !== 'Press3' && key !== 'YouTube' && <Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{producer[key]}</Table.Cell>
                     </Table.Row>
@@ -220,7 +221,7 @@ render() {
 {/* <OneProdBtn /> */}
 
 {/* Press Section */}
-{ this.state.producer.Press && 
+{ this.state.producer.Press1 && 
 <Grid.Row>
   <Grid.Column width={10}>
   <Press />
