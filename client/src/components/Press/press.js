@@ -5,7 +5,7 @@ class Press extends Component {
     render() {
         return (
             <div>
-                <Header as='h1' style={{backgroundColor: 'pink'}}>Press Section</Header>
+                <Header as='h1' style={{backgroundColor: '#fcf7e6'}}>Press Section</Header>
                 
             </div>
         );
