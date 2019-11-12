@@ -4,6 +4,7 @@ import { Grid, Table, List, Header, Responsive, Segment, Embed} from "semantic-u
 import Winecard from "../components/WineCard"
 import OneProdBtn from "../components/AllProducersBtn/index"
 import Press from "../components/Press/press"
+import Fouet from "../components/Fouet/fouet"
 
 class OneProducer extends Component {
   state = {
@@ -123,6 +124,16 @@ render() {
     </Grid.Row>
     }
 
+{ (this.state.producer.Producer === "Dom. Fouet") &&
+<Grid.Row>
+<Grid.Column width={15} style={{ backgroundColor: '#f0f2ed', paddingBottom: "40px"}} >
+  <Header as="h3" style={{ color: '#634b06', backgroundColor: '#f0f2ed', textAlign: 'center', paddingTop: "20px"}}>Hiram's 2019 tasting visit to with Julien Fouet conducted on a traditional flat-bottomed Loire boat, steered by the boat-maker - one of only two left making them.</Header>
+<Fouet />
+</Grid.Column>
+</Grid.Row>
+
+}
+
 {/* Press Section */}
 { this.state.press && 
   <Grid.Row>
@@ -228,6 +239,16 @@ render() {
   </Grid.Column>
   
 </Grid.Row>
+}
+
+{ (this.state.producer.Producer === "Dom. Fouet") &&
+<Grid.Row>
+<Grid.Column width={10} style={{ backgroundColor: '#f0f2ed', paddingBottom: "40px"}} >
+  <Header as="h3" style={{ color: '#634b06', backgroundColor: '#f0f2ed', textAlign: 'center', paddingTop: "20px"}}>Hiram's 2019 tasting visit to with Julien Fouet conducted on a traditional flat-bottomed Loire boat, steered by the boat-maker - one of only two left making them.</Header>
+<Fouet />
+</Grid.Column>
+</Grid.Row>
+
 }
 
     </Grid>
