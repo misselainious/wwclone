@@ -33,30 +33,10 @@ contextRef = createRef()
         .catch(err => console.log(err));
     }
 
-
-
-  // loadProducers = () => {
-  //   this.setState({
-  //     isLoading: true
-  //   })
-  //   API.getProducers()
-  //     .then(res => {
-  //       //The World's least efficient way of alphabetizing an array of objects
-  //       let idArray=[];
-  //       res.data.map( producer => {idArray.push(producer.Producer)})
-  //       idArray.sort()
-  //       let alphabeticalProducers = []
-  //       idArray.map( id => {
-  //         alphabeticalProducers.push( res.data.find( (producer)=>{ return producer.Producer === id } ))
-  //       })
-  //       this.setState({ Producers: alphabeticalProducers })
-  //     }
-  //     )
-  //     .catch(err => console.log(err));
-  // };
   
 render() {
- let france = this.state.Producers.filter(p => p.Country === "France");
+  let champagne = this.state.Producers.filter(p => p.Region === "Champagne");
+ let france = this.state.Producers.filter(p => (p.Country === "France" && p.Region != "Champagne"));
  let spain = this.state.Producers.filter(p => p.Country === "Spain");
  let portugal = this.state.Producers.filter(p => p.Country === "Portugal");
  let greece = this.state.Producers.filter(p => p.Country === "Greece");
@@ -76,7 +56,7 @@ render() {
    }
    return comparison
  }
-
+ champagne = champagne.sort(compare);
  france = france.sort(compare);
  spain = spain.sort(compare);
  portugal = portugal.sort(compare);
@@ -122,6 +102,32 @@ render() {
 </Dimmer>
 : (
   <Grid centered>
+
+{/* Champange */}
+<Grid.Row id='champagne'>
+  <Grid.Column>
+<Header as='h1' textAlign='right' style={{color: '#221244', backgroundColor: '#f2efef', textAlign: 'center', paddingTop: "20px", paddingBottom: "20px"}} >
+      Champagne
+    </Header>
+    </Grid.Column>
+</Grid.Row>
+
+    <Grid.Row>
+
+<Grid.Column width={12}>
+        {champagne.length ? (
+          
+            <Card.Group itemsPerRow={4}>
+          {champagne.map(producer => (
+              <Producercard id={producer.Producer} producer={producer.Producer} country={producer.Country} subregion={producer.Subregion} region={producer.Region} key={producer._id}/>            
+          ))}
+        </Card.Group>
+            ) : (
+              <h3> "No results to display"</h3>
+            )}
+            </Grid.Column>
+          
+            </Grid.Row>
 
 
 {/* FRANCE */}
