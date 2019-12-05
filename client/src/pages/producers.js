@@ -103,18 +103,18 @@ render() {
 : (
   <Grid centered>
 
-{/* Champange */}
-<Grid.Row id='champagne'>
-  <Grid.Column>
-<Header as='h1' textAlign='right' style={{color: '#221244', backgroundColor: '#f2efef', textAlign: 'center', paddingTop: "20px", paddingBottom: "20px"}} >
+     {/* Champange */}
+     <Grid.Row id='champagne' style={{backgroundColor:'#e6e6d2'}}>
+  <Grid.Column style={{backgroundColor:'#e6e6d2'}}>
+<Header as='h2' textAlign='right' style={{color: '#221244', backgroundColor: '#e6e6d2', textAlign: 'center', paddingTop: "10px", paddingBottom: "10px"}} >
       Champagne
     </Header>
     </Grid.Column>
 </Grid.Row>
 
-    <Grid.Row>
+    <Grid.Row style={{backgroundColor:'#e6e6d2', paddingBottom: '35px'}}>
 
-<Grid.Column width={12}>
+<Grid.Column width={12} style={{backgroundColor:'#e6e6d2'}}>
         {champagne.length ? (
           
             <Card.Group itemsPerRow={4}>
@@ -129,18 +129,25 @@ render() {
           
             </Grid.Row>
 
-
 {/* FRANCE */}
-<Grid.Row id='france'>
+<Grid.Row id='france' style={{paddingTop:"0px"}}>
   <Grid.Column>
 <Header as='h1' textAlign='right' style={{color: '#221244', backgroundColor: '#f2efef', textAlign: 'center', paddingTop: "20px", paddingBottom: "20px"}} >
       France
     </Header>
     </Grid.Column>
 </Grid.Row>
+       
+
+            {/* <Grid.Row >
+  <Grid.Column >
+<Header as='h2' textAlign='right' style={{color: '#221244', textAlign: 'center', paddingTop: "10px", paddingBottom: "10px"}} >
+      France
+    </Header>
+    </Grid.Column>
+</Grid.Row> */}
 
     <Grid.Row>
-
 <Grid.Column width={12}>
         {france.length ? (
           
@@ -155,6 +162,8 @@ render() {
             </Grid.Column>
           
             </Grid.Row>
+
+
 
 {/* SPAIN */}
 <Grid.Row id='spain'>
