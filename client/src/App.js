@@ -88,7 +88,7 @@ const PageSwitch = props => {
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/hiram" component={Hiram} />
       <Route path="/greenwood" component={Greenwood} />
-      <Route path="/login" component={Login}/>
+      <Route path="/login" component={Admin}/>
       <Route path="/events" component={EventsTable}/>
       <Route path="*" component={ErrorPage} />
     </Switch>
