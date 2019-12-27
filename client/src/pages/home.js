@@ -2,8 +2,9 @@ import React from "react";
 import Carousel from "../components/common/Carousel/Carousel";
 import { Link } from "react-router-dom";
 import Justin from "../components/JustIn/justin";
-import Feature from "../components/FeaturedWine/feature"
-import Event from "../components/Event/event"
+import Feature from "../components/FeaturedWine/feature";
+import Event from "../components/Event/event";
+import Announcement from "../components/announcement";
 
 import {
   Button,
@@ -27,6 +28,10 @@ const Home = () => (
  <Grid.Row dividing>
  <Header as='h1'style={{ textAlign: 'center', fontSize: '4em', color: '#962d2d'}}>WineWise</Header>
  </Grid.Row>
+
+ <Grid.Column width={12}>
+    <Announcement />
+    </Grid.Column>
 
  <Grid.Row>
    <Event />
@@ -83,7 +88,16 @@ const Home = () => (
   </Grid.Row>
 
   <Grid.Row>
+    <Grid.Column width={12}>
+    <Announcement />
+    </Grid.Column>
+
+  <Grid.Row>
    <Event />
+  </Grid.Row>
+
+ 
+    
   </Grid.Row>
 
   <Grid.Row columns={2} divided >
