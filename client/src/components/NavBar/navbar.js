@@ -50,13 +50,13 @@ const FixedMenuLayout = () => (
         
 
                {/* Events Button */}
-        <Menu.Item position='right' style={{marginRight:'10px'}} >
+        {/* <Menu.Item position='right' style={{marginRight:'10px'}} >
         <Link to="/events" onClick={scrollToTop}>
         <Button style={{ backgroundColor: '#88b2b8'}}>
          Polz Pre-Arrival
           </Button> 
           </Link>
-          </Menu.Item>
+          </Menu.Item> */}
 
 
         {/* Trade Button */}
