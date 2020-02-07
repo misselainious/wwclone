@@ -5,6 +5,7 @@ import Justin from "../components/JustIn/justin";
 import Feature from "../components/FeaturedWine/feature";
 import Event from "../components/Event/event";
 import Announcement from "../components/announcement";
+import Pato from "../components/Photo/pato";
 
 import {
   Button,
@@ -33,9 +34,13 @@ const Home = () => (
     <Announcement />
     </Grid.Column>
 
- <Grid.Row>
+ {/* <Grid.Row>
    <Event />
-  </Grid.Row>
+  </Grid.Row> */}
+
+<Grid.Row>
+  <Pato />
+</Grid.Row>
 
 <Grid centered>
  <Grid.Row>
@@ -92,10 +97,13 @@ const Home = () => (
     <Announcement />
     </Grid.Column>
 
-  <Grid.Row>
+  {/* <Grid.Row>
    <Event />
-  </Grid.Row>
+  </Grid.Row> */}
 
+<Grid.Row>
+  <Pato />
+</Grid.Row>
  
     
   </Grid.Row>

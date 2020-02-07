@@ -175,11 +175,11 @@ render() {
   </Grid.Column>
   </Grid.Row>
 
-  {/* <Grid.Row>
+  <Grid.Row>
   <Grid.Column width={14}>
 { this.state.industry && <MobilePricing caseSize={wine.Case_Size} price={wine.Price} net={wine.Net} avail={wine.Availability}/>}
 </Grid.Column>
-</Grid.Row> */}
+</Grid.Row>
 
   <Grid.Row>
     <Grid.Column width={14}>
@@ -294,11 +294,14 @@ render() {
  </Grid.Column>
 
  {/* PRICING */}
- {/* <Grid.Column width={6}>
+ {this.state.wine.Price && 
+ <Grid.Column width={6}>
  <Grid.Row>
 { this.state.industry && <Pricing caseSize={wine.Case_Size} price={wine.Price} net={wine.Net} avail={wine.Availability}/>}
 </Grid.Row>
- </Grid.Column> */}
+ </Grid.Column>
+ }
+
 </Grid.Row>
 
 <Grid.Row>
