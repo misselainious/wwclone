@@ -7,7 +7,7 @@ class Pato extends Component {
         return (
             <div>
                     <Divider style={{marginTop:"50px"}} />
-                    <Image centered src={"../images/group/acote.png"} size='big' />
+                    <Image centered src={"https://s3.us-west-1.wasabisys.com/wwassets/offers/acote.png"} size='big' />
                     <Segment centered attached style={{ textAlign:"center"}} color='violet'>A happy evening with Fílipa Pato and Willem Wouters at À Côté.</Segment>
                     <Divider hidden />
                     <Link to="/producerdetails/Fílipa%20Páto" >
