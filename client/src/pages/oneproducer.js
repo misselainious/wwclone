@@ -3,7 +3,7 @@ import API from "../utils/API";
 import { Grid, Table, List, Header, Responsive, Segment, Embed} from "semantic-ui-react";
 import Winecard from "../components/WineCard"
 import OneProdBtn from "../components/AllProducersBtn/index"
-import Press from "../components/Press/press"
+// import Press from "../components/Press/press"
 import Fouet from "../components/Fouet/fouet"
 
 class OneProducer extends Component {
@@ -75,7 +75,7 @@ render() {
        
         {
             producerObjKeys.map(key => 
-                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press' && key !== 'YouTube' &&<Table.Row key={key}>
+                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press' && key !== 'Female' && key !== 'YouTube' &&<Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{producer[key]}</Table.Cell>
                     </Table.Row>
@@ -135,14 +135,14 @@ render() {
 }
 
 {/* Press Section */}
-{ this.state.press && 
+{/* { this.state.press && 
   <Grid.Row>
     <Grid.Column width={10}>
     <Press />
     </Grid.Column>
     
   </Grid.Row>
-  }
+  } */}
 
 
  </Grid>
@@ -179,7 +179,7 @@ render() {
          <Table.Body>
         {
             producerObjKeys.map(key => 
-                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press' && key !== 'YouTube' && <Table.Row key={key}>
+                    producer[key] && key !== 'List_Notes' && key !== 'Order' && key !== 'Press' && key !== 'YouTube' && key !== 'Female'&& <Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{producer[key]}</Table.Cell>
                     </Table.Row>
@@ -232,14 +232,14 @@ render() {
 {/* <OneProdBtn /> */}
 
 {/* Press Section */}
-{ this.state.press && 
+{/* { this.state.press && 
 <Grid.Row>
   <Grid.Column width={10}>
   <Press />
   </Grid.Column>
   
 </Grid.Row>
-}
+} */}
 
 { (this.state.producer.Producer === "Dom. Fouet") &&
 <Grid.Row>

@@ -155,7 +155,8 @@ class Wines extends Component {
 
     return (
       <Grid style={{marginTop: '30px'}} columns={2}>
-        <Grid.Column width={3} style={{marginTop: '40px'}}>
+     
+        <Grid.Column width={3} >
         <SearchWines />
         <CheckboxSidebar checkableArrays={filterElements} handleFilterChange={this.handleFilterChange} />
 
