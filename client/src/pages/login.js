@@ -17,25 +17,16 @@ class Login extends Component {
         return (
             <Fragment>
                 <Grid textAlign='center' style={{ height: '475px', marginBottom: '300px' }} verticalAlign='middle'>
-                    <Grid.Column style={{ maxWidth: 450}}>
+                    <Grid.Row >
+                    <Grid.Column textAlign='center' style={{ maxWidth: 450}}>
                         <Header as='h3' textAlign='center' style={{ marginBottom: '30px', marginTop: '190px'}}>
-                            {/* <Image src='/logo.png' />  */}
                             Please enter the password to view this content.
                         </Header>
                         <Form size='large' onSubmit={this.handleFormSubmit}>
                             <Segment raised>
-                                <Form.Input fluid icon='lock' type='password' name="username" iconPosition='left' placeholder='password' onChange={this.handleChange} />
-                                {/* <Form.Input
-                                    fluid
-                                    name="password"
-                                    icon='lock'
-                                    iconPosition='left'
-                                    placeholder='Password'
-                                    type='password'
-                                    onChange={this.handleChange}
-                                /> */}
-
-                                <Button className="seeAllWinesBtn" size='small'>
+                                <Form.Input style={{width:'250px', marginBottom:'30px'}} fluid icon='lock' type='password' name="username" iconPosition='left' placeholder='password' onChange={this.handleChange} />
+                    
+                                <Button className="seeAllWinesBtn" size='small' style={{marginTop: '50px'}}>
                                     <p className="seeAllWinesText" fluid size='large'>
                                         Login
                             </p></Button>
@@ -49,6 +40,7 @@ class Login extends Component {
                             </Button>
                             </Link>
                     </Grid.Column>
+                    </Grid.Row>
                 </Grid>
             </Fragment>
         );

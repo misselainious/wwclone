@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Authbox from '../components/login/Authbox';
 import API from "../utils/API";
 import { Grid, Table, Segment, Image, Header, Responsive, Dimmer, Loader, Button, Icon, Dropdown} from "semantic-ui-react";
 import Winecard from '../components/WineCard'
@@ -236,7 +237,9 @@ render() {
   <Grid style={{marginTop: '100px', marginLeft:'20px', marginBottom: '20px'}} >
 
 
-
+{/* <Grid.Row>
+  <Authbox />
+</Grid.Row> */}
 
 <Grid.Row>
 

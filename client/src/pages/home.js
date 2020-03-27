@@ -93,7 +93,7 @@ const Home = () => (
   </Grid.Row>
 
   <Grid.Row>
-    <Grid.Column width={12}>
+    <Grid.Column marginRight={'20px'} width={5}>
     <Announcement />
     </Grid.Column>
 
