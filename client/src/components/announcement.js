@@ -4,7 +4,7 @@ import { Grid, Segment, Header, Icon, Divider, List, Message, Popup} from "seman
 
 const Announcement = () => {
     return (
-        <div>
+        <div style={{marginRight:"30px"}}>
                 <Message
       attached
       content='Hang in there!'
@@ -17,7 +17,8 @@ const Announcement = () => {
                         These times too will pass. Never has the business of selling wine seemed more noble! We are doing what we can and we know that you are as well. From what we can tell, our producers have mostly retreated to their vineyards, to enjoy the fresh air and the relative freedom afforded by that environment.
 
 Looking forward, we have not ceased for one second to plan for the resumption of normal business and have an impressive number of orders either on their way from Europe or in preparation for departure soon. Among the producers from whom you can soon expect to see new offerings are López de Heredia, Stéphane Tissot, Aphros, Fílipa Páto, Mas Grand Plagniol, Domaine Aux Moines, Forest-Marié and Tetramythos. When normal life resumes, we want to be in the best possible position to help you. In the meantime, do not hesitate to make our day by passing us an order if you have a need that we can meet.</p>
-                    
+
+    <p style={{ textAlign:"right", fontSize:"1.2em"}}>~ Your friends at WineWise</p>                
   
 {/* <Header as='h4'>
 For our part, these are the steps we have taken in response to this existential threat :
