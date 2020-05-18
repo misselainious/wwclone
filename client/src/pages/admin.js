@@ -4,6 +4,7 @@ import Desc from '../pdf_files/WineWise_priceList.pdf'
 import German from  '../pdf_files/priceList_Germany.pdf'
 import Sparkling from  '../pdf_files/priceList_Sparkling.pdf'
 import Austrian from '../pdf_files/austrianList.pdf'
+import Old from '../pdf_files/OldRioja.pdf'
 import Mags from  '../pdf_files/MagnumHalf.pdf'
 import {
   Grid,
@@ -93,11 +94,25 @@ class Admin extends Component {
 
       <div class="ui divider"></div>
 
+<Grid.Row>
+<Message>
+    <Message.Header style={{fontSize: '1.5em', color: '#990000', marginBottom: '25px'}}>2020 Offer of Old Riojas</Message.Header>
+    <p style={{fontSize: "1.1em"}}>
+      Please view our available selections.
+    </p>
+    <a href = {Old} target = "_blank" rel="noopener noreferrer">
+          <Button basic color = "brown" target="_blank" rel="noopener noreferrer">
+          <Icon name='folder' /> Old Rioja Offer
+          </Button>
+          </a>
+  </Message>
+</Grid.Row>
+
 
 <Grid.Row>
   <Grid.Column width='8'>
 
-<Table celled striped style={{marginTop: '8%'}}>
+<Table celled striped style={{marginTop: '4%'}}>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell textAlign='center' colSpan='3' style={{fontSize: '1.3em'}}>PDF's available for download</Table.HeaderCell>
