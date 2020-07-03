@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Justin from "../components/JustIn/justin";
 import Feature from "../components/FeaturedWine/feature";
 import Event from "../components/Event/event";
-import Announcement from "../components/announcement";
+import Announcement from "../components/Announcements/announcement";
+import Announcement2 from "../components/Announcements/announcement2";
 import Pato from "../components/Photo/pato";
 
 import {
@@ -31,7 +32,8 @@ const Home = () => (
  </Grid.Row>
 
  <Grid.Column width={12}>
-    <Announcement />
+    {/* <Announcement /> */}
+    <Announcement2 />
     </Grid.Column>
   <Grid.Column style={{textAlign: "center", marginTop:"15px"}}  centered>
   <Link to="/allwines">
@@ -146,8 +148,8 @@ const Home = () => (
       </Button>
     </Link> */}
    
-    <Announcement />
-  
+    {/* <Announcement /> */}
+    <Announcement2 />
   
    </Grid.Column>
 

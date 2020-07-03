@@ -26,7 +26,7 @@ class imageScrolling extends Component {
     return (
       <Responsive minWidth={768}>
   
-      <Image className="frontImage" src={`./images/${image}`} />
+      <Image class="ui medium image" className="frontImage, ui large image" src={`./images/${image}`} />
   
       </Responsive>
 
