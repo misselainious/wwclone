@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
-import { Grid, Header, Segment, Dimmer, Loader } from "semantic-ui-react";
+import { Grid, Header, Segment, Dimmer, Loader, Table, Icon } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
+import NewWinecard from "../components/NewWineCard/NewWineCard"
 import SearchWines from "../components/SearchWines"
+import { Link } from "react-router-dom";
+
 
 class Wines extends Component {
   state = {
@@ -17,7 +20,6 @@ class Wines extends Component {
       countries: [],
       colors: [],
       regions: [],
-    
       farming: [],
       female: []
     }
@@ -98,6 +100,11 @@ class Wines extends Component {
     const colors = ["Rosé", "White", "Red", "Sparkling", "Dessert"]
     const female = ["Female Winemaker"]
     const regions = this.state.regionNames;
+    const notes = this.state.WineWise_Notes;
+    const origin = this.state.Country;
+    const region = this.state.Region;
+    const color = this.state.Color;
+
     // const producers = this.state.producerNames;
     const farming = ["Sustainable", "Organic", "Certified Organic", "Bio-dynamic", "Certified Bio-dynamic", "HEV"];
 
@@ -107,10 +114,11 @@ class Wines extends Component {
     }, {
       filterType: "colors",
       elements: colors
-    }, {
-      filterType: "regions",
-      elements: regions
     }, 
+    // {
+    //   filterType: "regions",
+    //   elements: regions
+    // }, 
     // {
     //   filterType: "producers",
     //   elements: producers
@@ -169,11 +177,62 @@ class Wines extends Component {
        
                 
                  
-                    {wineList.map(wine => (
-                      <Winecard header={wine.Wine} region={wine.Region}  country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} Code={wine.Code} new= {wine.Just_In} producer={wine.Producer}  farming={wine.Farming_practices} female={wine.Female_Winemaker}/>
+                    {/* {wineList.map(wine => (
+                      <Winecard header={wine.Wine} region={wine.Region}  country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} color={wine.Color} Code={wine.Code} new= {wine.Just_In} producer={wine.Producer} notes={wine.WineWise_Notes} farming={wine.Farming_practices} female={wine.Female_Winemaker}/>
+                    ))} */}
+
+
+{/* New Table Display */}
+
+<Table>
+<Table.Header>
+   <Table.Row>
+     <Table.HeaderCell singleLine>Country - Region</Table.HeaderCell>
+     <Table.HeaderCell>Producer</Table.HeaderCell>
+     <Table.HeaderCell>Wine</Table.HeaderCell>
+     <Table.HeaderCell>Color</Table.HeaderCell>
+     <Table.HeaderCell singleLine>Farming</Table.HeaderCell>
+   </Table.Row>
+ </Table.Header>
+{wineList.map(wine => (
+
+
+ <Table.Body>
+   <Table.Row>
+     <Table.Cell>
+       <Header as='h5' textAlign='left'>
+         {wine.Country} - {wine.Region}
+       </Header>
+     </Table.Cell>
+     
+     <Table.Cell singleLine>
+     <Link to={"/producerdetails/" + wine.Producer} >
+       {wine.Producer}
+       </Link>
+       </Table.Cell>
+     
+     <Table.Cell>
+     <Link to={"/details/" + wine._id} >
+       {wine.Wine}
+       </Link>
+     </Table.Cell>
+     <Table.Cell textAlign='left'>
+       {wine.Color}
+       
+     </Table.Cell>
+     <Table.Cell>
+     { ((wine.Farming_practices === "Organic") || (wine.Farming_practices === "Certified Organic" )) && <Icon name='leaf' size='small' color='green'/>}
+     { ((wine.Farming_practices === "Bio-dynamic") || (wine.Farming_practices === "Certified Bio-dynamic" )) && <Icon name='moon' size='small' color='blue'/>}
+  { wine.Farming_practices === "HEV" && <Icon name='sun' size='small' color='yellow'/>}
+     {wine.Farming_practices}
+     </Table.Cell>
+   </Table.Row>
+
+ </Table.Body>
+    
                     ))}
-                  
-              
+</Table>      
+{/* Done New Table Display */}              
                 </Grid.Row>
             ) : (
                 <Header as='h3'>{this.state.isLoading ? 
