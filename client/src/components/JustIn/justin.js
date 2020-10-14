@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Winecard from "../WineCard/index.js"
-import { Grid, Divider } from 'semantic-ui-react';
-// import { createCipher } from "crypto";
+import { Grid, Divider, Button } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
 
 
 class Justin extends Component {
@@ -48,9 +48,14 @@ class Justin extends Component {
 
       
                     {this.state.wines.map(wine => (
+                      <div>
                       <Winecard header={wine.Wine} region={wine.Region} producer={wine.Producer} country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} Code={wine.Code} />
+                      <Link to= {'/producerdetails/'+ wine.Producer}>
+                      <Button>View {wine.Producer}'s Page</Button>
+                      </Link>
+                      </div>
                     ))}
-                  </Grid.Row>
+      </Grid.Row>
                   </Grid>
 
 

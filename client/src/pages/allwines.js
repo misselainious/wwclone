@@ -3,7 +3,6 @@ import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
 import { Grid, Header, Segment, Dimmer, Loader, Table, Icon } from "semantic-ui-react";
 import Winecard from "../components/WineCard"
-import NewWinecard from "../components/NewWineCard/NewWineCard"
 import SearchWines from "../components/SearchWines"
 import { Link } from "react-router-dom";
 

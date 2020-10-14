@@ -3,6 +3,7 @@ import Carousel from "../components/common/Carousel/Carousel";
 import { Link } from "react-router-dom";
 import Justin from "../components/JustIn/justin";
 import Feature from "../components/FeaturedWine/feature";
+import Videos from "../components/Videos/video";
 import Event from "../components/Event/event";
 import Announcement from "../components/Announcements/announcement";
 import Announcement2 from "../components/Announcements/announcement2";
@@ -33,12 +34,12 @@ const Home = () => (
 
  <Grid.Column width={12}>
     {/* <Announcement /> */}
-    <Announcement2 />
+    {/* <Announcement2 /> */}
     </Grid.Column>
   <Grid.Column style={{textAlign: "center", marginTop:"15px"}}  centered>
-  <Link to="/allwines">
+  <Link to="/producers">
         <Button  style={{textAlign: "center"}} className="seeAllWinesBtn" size='small'>
-        <p className="seeAllWinesText">See All Wines</p>
+        <p className="seeAllWinesText">Browse Our Producers</p>
         </Button>
       </Link>
   </Grid.Column>
@@ -62,7 +63,7 @@ const Home = () => (
         Our mission
       </Divider>
 
-     
+{/*      
         <p  style={{ padding:'20px',fontSize: '1.2em' }}>
           Since 1989, WineWise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for us.
         </p>
@@ -71,7 +72,7 @@ const Home = () => (
         <Button className="seeAllWinesBtn" size='small'>
         <p className="seeAllWinesText">See All Wines</p>
         </Button>
-      </Link>
+      </Link> */}
    </Grid.Column>
  </Grid.Row>
 
@@ -97,12 +98,6 @@ const Home = () => (
      </Grid.Column>
    </Grid.Row>
 
-   {/* <Grid.Row>
-   <Message color='purple'>
-     <Message.Header>For the first time ever... we are offering retail to the public!</Message.Header>
-    <p>Additional info</p>
-   </Message>
-   </Grid.Row> */}
 
   <Grid.Row>
    <Carousel />
@@ -122,6 +117,16 @@ const Home = () => (
   <Pato />
 </Grid.Row> */}
  
+ <Grid.Row>
+   <Grid.Column width={8}>
+   <p style={{ padding:'20px',fontSize: '1.4em' }}>
+     <em>
+        Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for Wine Wise.
+        </em>
+         </p>
+   </Grid.Column>
+
+ </Grid.Row>
     
   {/* </Grid.Row> */}
 
@@ -134,10 +139,10 @@ const Home = () => (
       className='header'
       horizontal
       style={{ color: '#962d2d', margin: '1em 0em', textTransform: 'uppercase' }}>
-  Our Mission
+  Our Newest Videos
     </Divider>
 
-    <Image src="../images/vineyard.jpg" size='large' centered/>
+    {/* <Image src="../images/vineyard.jpg" size='large' centered/>
       <p style={{ padding:'20px',fontSize: '1.2em' }}>
         Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for Wine Wise.
       </p>
@@ -146,10 +151,10 @@ const Home = () => (
       <Button className="seeAllWinesBtn" size='small'>
       <p className="seeAllWinesText">See All Wines</p>
       </Button>
-    </Link>
+    </Link> */}
    
-    {/* <Announcement /> */}
-    <Announcement2 />
+    <Videos />
+    {/* <Announcement2 /> */}
   
    </Grid.Column>
 
