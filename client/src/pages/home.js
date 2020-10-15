@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Justin from "../components/JustIn/justin";
 import Feature from "../components/FeaturedWine/feature";
 import Videos from "../components/Videos/video";
+import Travels from "../components/TravelsCarousel/travels";
 import Event from "../components/Event/event";
 import Announcement from "../components/Announcements/announcement";
 import Announcement2 from "../components/Announcements/announcement2";
@@ -32,6 +33,18 @@ const Home = () => (
  <Header as='h1'style={{ textAlign: 'center', fontSize: '4em', color: '#962d2d'}}>WineWise</Header>
  </Grid.Row>
 
+ <Grid.Row>
+   <Grid.Column width={8}>
+   <p style={{ padding:'20px',fontSize: '1.4em' }}>
+     <em>
+        Since 1989, Wine Wise has been importing some of the finest estate-grown wines from France, Germany, Austria, Spain, Portugal and Greece. Our speciality is small family firms that offer over-performing wines and exceptional value. Grower Champagnes and other sparkling wines are a particular area of emphasis for Wine Wise.
+        </em>
+         </p>
+   </Grid.Column>
+
+ </Grid.Row>
+
+ <Grid.Row>
  <Grid.Column width={12}>
     {/* <Announcement /> */}
     {/* <Announcement2 /> */}
@@ -43,7 +56,7 @@ const Home = () => (
         </Button>
       </Link>
   </Grid.Column>
-
+  </Grid.Row>
  {/* <Grid.Row>
    <Event />
   </Grid.Row> */}
@@ -60,8 +73,10 @@ const Home = () => (
         className='header'
         horizontal
         style={{ color: '#962d2d', margin: '1em 0em', textTransform: 'uppercase' }}>
-        Our mission
+        Our Newest Videos
       </Divider>
+
+      <Videos />
 
 {/*      
         <p  style={{ padding:'20px',fontSize: '1.2em' }}>
@@ -141,6 +156,7 @@ const Home = () => (
       style={{ color: '#962d2d', margin: '1em 0em', textTransform: 'uppercase' }}>
   Our Newest Videos
     </Divider>
+    
 
     {/* <Image src="../images/vineyard.jpg" size='large' centered/>
       <p style={{ padding:'20px',fontSize: '1.2em' }}>
@@ -161,6 +177,22 @@ const Home = () => (
  <Feature />
 
  </Grid.Row>
+
+<Grid.Row>
+  <Grid.Column>
+ <Divider
+      as='h2'
+      className='header'
+      horizontal
+      style={{ color: '#962d2d', margin: '1em 0em', textTransform: 'uppercase' }}>
+  Photos From the Field
+    </Divider>
+
+    <Travels /> 
+    
+    </Grid.Column>
+    </Grid.Row>
+
 
  <Grid.Row>
   <Justin />
