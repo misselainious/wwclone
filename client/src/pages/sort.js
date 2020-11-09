@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 // import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
-import { Grid, Header, Segment, Dimmer, Loader, Dropdown, Menu, Checkbox, Icon } from "semantic-ui-react";
+import { Grid, Header, Segment, Dimmer, Loader, Dropdown, Menu, Checkbox, Icon, Table } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import Winecard from "../components/WineCard"
 import SearchWines from "../components/SearchWines"
 
@@ -158,26 +159,56 @@ class Wines extends Component {
   <Dropdown placeholder='Sustainability' fluid multiple selection options={farm} style={{ marginBottom: '20px'}} />
 
   
-        </Grid.Column>
-   <Grid.Column width={12} style={wineAreaStyle}>
-      <Grid centered style={{marginTop: '80px'}}>
-        {/* { (wineList.length === 0) ? <h3>No results to display</h3> :(<h3>yes results</h3>)} */}
-        {wineList.length ? (
-           <Grid.Row >
-                {wineList.map(wine => (
-                    <Winecard header={wine.Wine} region={wine.Region}  country={wine.Country} wineid={wine._id} key={wine._id} url={wine.URL} Code={wine.Code} producer={wine.Producer}  farming={wine.Farming_practices} female={wine.Female_Winemaker}/>
-                ))}
-           </Grid.Row>
-            ) : (
-                <Header as='h3'>{this.state.isLoading ? 
-           
-                  <Dimmer active inverted>
-                    <Loader inverted>Loading... </Loader>
-                  </Dimmer>
-                : "No wines meet your criteria"}</Header>
-              )}
+      </Grid.Column>
+      <Grid.Column width={12} style={wineAreaStyle}>
+      <Table>
+<Table.Header>
+   <Table.Row>
+     <Table.HeaderCell singleLine>Country - Region</Table.HeaderCell>
+     <Table.HeaderCell>Producer</Table.HeaderCell>
+     <Table.HeaderCell>Wine</Table.HeaderCell>
+     <Table.HeaderCell>Color</Table.HeaderCell>
+     <Table.HeaderCell singleLine>Farming</Table.HeaderCell>
+   </Table.Row>
+ </Table.Header>
+{wineList.map(wine => (
 
-      </Grid>
+
+ <Table.Body>
+   <Table.Row>
+     <Table.Cell>
+       <Header as='h5' textAlign='left'>
+         {wine.Country} - {wine.Region}
+       </Header>
+     </Table.Cell>
+     
+     <Table.Cell singleLine>
+     <Link to={"/producerdetails/" + wine.Producer} >
+       {wine.Producer}
+       </Link>
+       </Table.Cell>
+     
+     <Table.Cell>
+     <Link to={"/details/" + wine._id} >
+       {wine.Wine}
+       </Link>
+     </Table.Cell>
+     <Table.Cell textAlign='left'>
+       {wine.Color}
+       
+     </Table.Cell>
+     <Table.Cell>
+     { ((wine.Farming_practices === "Organic") || (wine.Farming_practices === "Certified Organic" )) && <Icon name='leaf' size='small' color='green'/>}
+     { ((wine.Farming_practices === "Bio-dynamic") || (wine.Farming_practices === "Certified Bio-dynamic" )) && <Icon name='moon' size='small' color='blue'/>}
+  { wine.Farming_practices === "HEV" && <Icon name='sun' size='small' color='yellow'/>}
+     {wine.Farming_practices}
+     </Table.Cell>
+   </Table.Row>
+
+ </Table.Body>
+    
+                    ))}
+</Table>      
       </Grid.Column>
       </Grid>
 
