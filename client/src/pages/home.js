@@ -91,6 +91,13 @@ const Home = () => (
    </Grid.Column>
  </Grid.Row>
 
+
+ <Grid.Row>
+   <Grid.Column width={12}>
+   <Announcement />
+   </Grid.Column>
+ </Grid.Row>
+
  {/* <Grid.Row>
   <Feature />
  </Grid.Row> */}
@@ -170,13 +177,22 @@ const Home = () => (
     </Link> */}
    
     <Videos />
-    {/* <Announcement2 /> */}
+   
   
    </Grid.Column>
 
  <Feature />
 
  </Grid.Row>
+
+
+ <Grid.Row>
+   <Grid.Column width={6}>
+   <Announcement />
+   </Grid.Column>
+ </Grid.Row>
+
+
 
 <Grid.Row>
   <Grid.Column>
