@@ -7,20 +7,20 @@ const Announcement = () => {
         <div style={{marginRight:"30px"}}>
                 <Message
       attached
-      content='WineWise Welcomes Paterianakis!'
-      style={{ backgroundColor:"#fcfbf2", fontSize:"1.3em", textAlign:"center"}}
+      content='WineWise Welcomes Antonio Madeira!'
+      style={{ backgroundColor:"#fcfbf2", fontSize:"1.2em", textAlign:"center"}}
     />
             <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2"}}>
                 <Grid columns={1} >
                     <Grid.Column >
                         <Grid.Row>
-                            <Image src="../../images/group/HPA.png" size="medium" centered></Image>
+                            <Image src="../../images/group/PAM.png" size="medium" centered></Image>
                         <p style={{ textAlign:"left", fontSize:"1.1em", marginTop:"10px"}}>
-                        Established in 1990, this was the first certified organic estate in Crete. With its 4000 year-old wine culture, this magnificent island offers no shortage of unique indigenous grape varieties, which are what we have chosen to feature here. The winery itself is intelligently constructed into a hillside, which offers natural insulation and the valuable possibility to move everything by gravity. Giorgios Paterianakis makes an impressive array of wines for a modestly sized estate. Our initial selection is two whites and a red. 
+                        When Vasco Croft of Aphros recommended António to us, he described him as “a young brilliant producer who is making a unique job with reaching old vines and terroirs, using organic farming and biodynamics.” He further stated that he thought these the best wines in the Dão today, and certainly the most mineral.
                         </p>
                         <div style={{textAlign: 'center'}}>
-                        <Link to= {'/producerdetails/Paterianakis'}>
-                      <Button style={{textAlign: 'center'}}>View Paterianakis' Page</Button>
+                        <Link to= {'/producerdetails/Antonio Madeira'}>
+                      <Button style={{textAlign: 'center'}}>View Antonio Madeira's Page</Button>
                       </Link>
                       </div>
                         </Grid.Row>
