@@ -94,7 +94,7 @@ class Admin extends Component {
 
       <div class="ui divider"></div>
 
-<Grid.Row>
+{/* <Grid.Row>
 <Message>
     <Message.Header style={{fontSize: '1.5em', color: '#990000', marginBottom: '25px'}}>2020 Offer of Old Riojas</Message.Header>
     <p style={{fontSize: "1.1em"}}>
@@ -106,7 +106,7 @@ class Admin extends Component {
           </Button>
           </a>
   </Message>
-</Grid.Row>
+</Grid.Row> */}
 
 
 <Grid.Row>
