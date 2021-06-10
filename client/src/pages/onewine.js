@@ -5,6 +5,7 @@ import { Grid, Table, Segment, Image, Header, Responsive, Dimmer, Loader, Button
 import Winecard from '../components/WineCard'
 import Pricing from '../components/Pricing/pricing'
 import MobilePricing from '../components/Pricing/mobilePricing'
+import Scores from '../components/Scores/scores'
 import { Link } from "react-router-dom";
 import {Moon, Female, Leaf, Sun} from '../components/Labels/Labels'
 import decode from 'jwt-decode';
@@ -194,7 +195,7 @@ render() {
     <Table.Body>
         {
             wineObjKeys.map(key => 
-                    wine[key] !== '' && key !== 'WineWise_Notes' && key !== 'Just_In' && key !== 'Female_Winemaker' && key !== 'Order' && key !== 'Availability'&& key !== 'Price' && key !== 'Case_Size' && key !== 'Net' && <Table.Row key={key}>
+                    wine[key] !== '' && key !== 'WineWise_Notes' && key !== 'Just_In' && key !== 'Female_Winemaker' && key !== 'Order' && key !== 'Availability' && key !== 'Price' && key !== 'Case_Size' && key !== 'Net' && key !== 'WineSpectator' && key !== 'Parker' && key !== 'W_S' && key !== 'Vinous' && key !== 'Decanter' && key !== 'Guide_Hachette' && key !== 'Wine_Enthusiast' && key !== 'Jancis_Robinson' && key !== 'Gilbert_Gaillard' && key !== 'Falstaff' && <Table.Row key={key}>
                         <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                         <Table.Cell>{wine[key]}</Table.Cell>
                     </Table.Row>
@@ -203,6 +204,13 @@ render() {
     </Table.Body>
    </Table>
    </Grid.Column>
+  </Grid.Row>
+
+  <Grid.Row left>
+    <Grid.Column left width={7}>
+  <Scores pk={wine.Parker} ws={wine.WineSpectator} vn={wine.Vinous} dc={wine.Decanter} gh={wine.Guide_Hachette} we={wine.Wine_Enthusiast} jr={wine.Jancis_Robinson} gg={wine.Gilbert_Gaillard} fs={wine.Falstaff}></Scores>
+</Grid.Column>
+
   </Grid.Row>
 
   {(this.state.wines.length === 0)? <div></div>:
@@ -320,7 +328,7 @@ render() {
    <Table.Body>
        {
            wineObjKeys.map(key => 
-                   wine[key] !== '' && key !== 'WineWise_Notes' && key !== 'Just_In' && key !== 'Female_Winemaker' && key !== 'Order' && key !== 'Availability' && key !== 'Price' && key !== 'Case_Size' && key !== 'Net' && <Table.Row key={key}>
+                   wine[key] !== '' && key !== 'WineWise_Notes' && key !== 'Just_In' && key !== 'Female_Winemaker' && key !== 'Order' && key !== 'Availability' && key !== 'Price' && key !== 'Case_Size' && key !== 'Net' && key !== 'WineSpectator' && key !== 'Parker' && key !== 'W_S' && key !== 'Vinous' && key !== 'Decanter' && key !== 'Guide_Hachette' && key !== 'Wine_Enthusiast' && key !== 'Jancis_Robinson' && key !== 'Gilbert_Gaillard' && key !== 'Falstaff' && <Table.Row key={key}>
                        <Table.Cell>{this.removeUnderscores(key)}</Table.Cell>
                        <Table.Cell>{wine[key]}</Table.Cell>
                    </Table.Row>
@@ -329,6 +337,11 @@ render() {
    </Table.Body>
   </Table>
  </Grid.Column>
+
+
+
+<Scores pk={wine.Parker} ws={wine.WineSpectator} vn={wine.Vinous} dc={wine.Decanter} gh={wine.Guide_Hachette} we={wine.Wine_Enthusiast} jr={wine.Jancis_Robinson} gg={wine.Gilbert_Gaillard} fs={wine.Falstaff}></Scores>
+
 </Grid.Row>
 
 

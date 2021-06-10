@@ -7,20 +7,20 @@ const Announcement = () => {
         <div style={{marginRight:"30px"}}>
                 <Message
       attached
-      content='WineWise Welcomes Antonio Madeira!'
+      content='WineWise Welcomes Herdade do Mouchão!'
       style={{ backgroundColor:"#fcfbf2", fontSize:"1.2em", textAlign:"center"}}
     />
             <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2"}}>
                 <Grid columns={1} >
                     <Grid.Column >
                         <Grid.Row>
-                            <Image src="../../images/group/PAM.png" size="medium" centered></Image>
+                            <Image src="../../images/group/PMO.png" size="medium" centered></Image>
                         <p style={{ textAlign:"left", fontSize:"1.1em", marginTop:"10px"}}>
-                        When Vasco Croft of Aphros recommended António to us, he described him as “a young brilliant producer who is making a unique job with reaching old vines and terroirs, using organic farming and biodynamics.” He further stated that he thought these the best wines in the Dão today, and certainly the most mineral.
-                        </p>
+                        It is no exaggeration to say that we have been interested in this great estate since we began importing from Portugal over a decade ago. However, we were only recently able to taste their wines and connect the dots between the press accolades, their iconic status in Portugal and the wines themselves. It turns out that the oldest active winery in the Alentejo, beloved of luminaries as diverse as Jancis Robinson, Sarah Ahmed and Hugh Johnson, makes not just the world-class reds we were hoping to find, but stunning, seriously age-worthy whites as well.
+                         </p>
                         <div style={{textAlign: 'center'}}>
-                        <Link to= {'/producerdetails/Antonio Madeira'}>
-                      <Button style={{textAlign: 'center'}}>View Antonio Madeira's Page</Button>
+                        <Link to= {'/producerdetails/Herdade do Mouchão'}>
+                      <Button style={{textAlign: 'center'}}>View Herdade do Mouchão's Page</Button>
                       </Link>
                       </div>
                         </Grid.Row>

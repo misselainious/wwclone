@@ -6,7 +6,7 @@ import "./carousel.css";
 class imageScrolling extends Component {
 
   state = {
-    imageArray: ["group/PAM.png", "group/KLB.png", "group/LH.png", "group/HPA.png", "group/APO.png", "group/PFP.png", "group/PAP.png", "group/FBO.png", "group/SEP.png", "group/FCF.png", "group/SVA.png", "group/SIJ3.png", "group/GCS.png", "group/SBF.png", "group/AHI.png", "group/SPP.png", "group/SCA.png", "group/Landereau.png", "group/KLR.png"],
+    imageArray: ["group/PMO.png", "group/PQP.png", "group/PAM.png", "group/KLB.png", "group/LH.png", "group/HPA.png", "group/APO.png", "group/PFP.png", "group/PAP.png", "group/FBO.png", "group/SEP.png", "group/FCF.png", "group/SVA.png", "group/SIJ3.png", "group/GCS.png", "group/SBF.png", "group/AHI.png", "group/SPP.png", "group/SCA.png", "group/Landereau.png", "group/KLR.png"],
     currentImageIndex: 0
   }
   componentDidMount() {
