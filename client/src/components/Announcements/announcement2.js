@@ -11,30 +11,29 @@ const Announcement2 = () => {
                     <Grid.Column >
                         <Grid.Row>
 
-                        <p style={{ textAlign:"center", fontSize:"2.2em"}}>Thank You!</p>    
-                        <p style={{ textAlign:"center", fontSize:"1.1em"}}>We thank all our customers who enabled us to donate </p> 
-                        <div style={{ textAlign:"center", marginBottom:"20px"}}>
+                         
+                        <p style={{ textAlign:"center", fontSize:"1.6em"}}> <Icon name='truck' size='large' /> A note about shipping charges...</p> 
+                        <br />
+                        {/* <div style={{ textAlign:"center", marginBottom:"20px"}}>
                         <p style={{ textAlign:"center", display:"inline", fontSize:"2.8em"}}> $1780</p>
                         <p style={{ textAlign:"center", display:"inline", fontSize:"1.8em"}}> to</p>
                        <p style={{ textAlign:"center", fontSize:"1.8em", display:"inline", color:"#e2b007"}}> Color</p>
                        <p style={{ textAlign:"center", fontSize:"1.8em", display:"inline", color:"#fa9571"}}> Of</p>
                        <p style={{ textAlign:"center", fontSize:"1.8em", display:"inline", color:"#f85218"}}> Change</p> <br></br>
-                       </div>
-                       <p style={{ textAlign:"center", fontSize:"1.1em"}}> for sales made and/or delivered in the week of June 8. </p>
-                       <p style={{ textAlign:"center", fontSize:"2.15em", marginBottom:"20px"}}> Black Lives Matter!</p>
+                       </div> */}
+                       <p style={{ textAlign:"center", fontSize:"1.1em"}}> After long and deep consideration, we have reluctantly come up with a new scale of supplementary charges in light of Zephyr's implacable decision to institute a minimum charge on all deliveries.</p>
+                       <p style={{ textAlign:"center", fontSize:"1.8em", color:"#ce633a"}}> We thank you for your understanding and continued support.</p> 
+
+                      <List bulleted style={{ textAlign: "center", fontSize: "1.2em", color:"#202428"}}>
+                          <List.Item>1 case deliveries - $15 surcharge</List.Item>
+                          <List.Item>2 case deliveries - $10 surcharge</List.Item>
+                      </List>
+                      
+                       <br />
 
                
                         </Grid.Row>
-                        <Grid.Row>
-                            <Grid.Column>
-                                <Segment>
-                                    <a href={'https://colorofchange.org/'}>
-                                    <Image centered src={`https://s3.us-west-1.wasabisys.com/wwassets/offers/coc.png`}></Image>
-                                    <p style={{textAlign:"center", marginTop:"15px"}}>www.colorofchange.org</p>
-                                    </a>
-                                </Segment>
-                            </Grid.Column>
-                        </Grid.Row>
+                       
                     </Grid.Column>
                 </Grid>   
             </Segment>

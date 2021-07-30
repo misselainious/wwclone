@@ -43,15 +43,17 @@ const Home = () => (
    </Grid.Column>
 
  </Grid.Row>
+ <Grid centered>
+ <Grid.Row>
+   <Grid.Column centered width={10} style={{textAlign:"center"}}>
+   <Announcement2 style={{textAlign:"center"}}/>
+   </Grid.Column>
+ </Grid.Row>
 
  <Grid.Row>
- <Grid.Column width={12}>
-    {/* <Announcement /> */}
-    {/* <Announcement2 /> */}
-    </Grid.Column>
-  <Grid.Column style={{textAlign: "center", marginTop:"15px"}}  centered>
+  <Grid.Column style={{textAlign: "center", marginTop:"15px"}} centered>
   <Link to="/producers">
-        <Button  style={{textAlign: "center"}} className="seeAllWinesBtn" size='small'>
+        <Button centered style={{textAlign: "center"}} className="seeAllWinesBtn" size='small'>
         <p className="seeAllWinesText">Browse Our Producers</p>
         </Button>
       </Link>
@@ -65,7 +67,7 @@ const Home = () => (
   <Pato />
 </Grid.Row> */}
 
-<Grid centered>
+{/* <Grid centered> */}
  <Grid.Row>
    <Grid.Column width={14}>
     <Divider
@@ -150,7 +152,11 @@ const Home = () => (
 
  </Grid.Row>
     
-  {/* </Grid.Row> */}
+ <Grid.Row>
+   <Grid.Column width={8}>
+   <Announcement2 />
+   </Grid.Column>
+ </Grid.Row>
 
   <Grid.Row columns={2} divided >
 
@@ -184,6 +190,7 @@ const Home = () => (
  <Feature />
 
  </Grid.Row>
+
 
 
  <Grid.Row>
