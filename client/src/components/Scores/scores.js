@@ -10,7 +10,11 @@ return (
 
 
 {/* SCORES */}
-<Grid.Row>
+
+
+{ ( (this.props.pk) || (this.props.ws) || (this.props.vn) || (this.props.dc) || (this.props.gh) || (this.props.we) || (this.props.jr) || (this.props.gg) || (this.props.fs) ) &&
+
+
  <Grid.Column width={8}>
   <Table celled>
    <Table.Header>
@@ -80,9 +84,10 @@ return (
    </Table.Body>
   </Table>
  </Grid.Column>
-</Grid.Row>
+}
 </div>
 );
 }
 }
+
 export default Scores;

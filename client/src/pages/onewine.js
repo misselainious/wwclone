@@ -205,6 +205,7 @@ render() {
    </Table>
    </Grid.Column>
   </Grid.Row>
+{/* SCORES MOBILE */}
 
   <Grid.Row left>
     <Grid.Column left width={7}>
@@ -212,6 +213,9 @@ render() {
 </Grid.Column>
 
   </Grid.Row>
+    
+
+
 
   {(this.state.wines.length === 0)? <div></div>:
 
@@ -338,9 +342,9 @@ render() {
   </Table>
  </Grid.Column>
 
-
-
+<Grid.Row>
 <Scores pk={wine.Parker} ws={wine.WineSpectator} vn={wine.Vinous} dc={wine.Decanter} gh={wine.Guide_Hachette} we={wine.Wine_Enthusiast} jr={wine.Jancis_Robinson} gg={wine.Gilbert_Gaillard} fs={wine.Falstaff}></Scores>
+</Grid.Row>
 
 </Grid.Row>
 
