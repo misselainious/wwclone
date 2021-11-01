@@ -4,7 +4,7 @@ import Desc from '../pdf_files/WineWise_priceList.pdf'
 import German from  '../pdf_files/priceList_Germany.pdf'
 import Sparkling from  '../pdf_files/priceList_Sparkling.pdf'
 import Austrian from '../pdf_files/austrianList.pdf'
-import Old from '../pdf_files/OldRioja.pdf'
+import Cust from '../pdf_files/WineWise_New_Customer_Application.pdf'
 import Mags from  '../pdf_files/MagnumHalf.pdf'
 import {
   Grid,
@@ -191,6 +191,16 @@ class Admin extends Component {
         <Table.Cell>List of Magnums and Half bottles only.</Table.Cell>
       </Table.Row>
 
+      <Table.Row>
+        <Table.Cell textAlign='center'>
+        <a href = {Cust} target = "_blank" rel="noopener noreferrer">
+          <Button basic color = "brown" target="_blank" rel="noopener noreferrer">
+          <Icon name='folder' />New Customer Application
+          </Button>
+          </a>
+        </Table.Cell>
+        <Table.Cell>Blank application for new accounts</Table.Cell>
+      </Table.Row>
 
     </Table.Body>
   </Table>
