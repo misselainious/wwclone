@@ -5,16 +5,26 @@ import { Grid, Segment, Header, Icon, Divider, List, Message, Popup, Embed} from
 const Videos = () => {
     return (
         <div style={{margin:"30px"}}>
+
+             {/* Lacourte godbillion Video */}
+   <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2", margin: '10px', textAlign:"center"}}>
+       <Header>Lacourte-Godbillon</Header>
+   <Embed
+   id='XG4h0LtwSG4'
+    placeholder={'https://img.youtube.com/vi/XG4h0LtwSG4/3.jpg'}
+    source='youtube'
+  />
+  </Segment>
    
    {/* Filipa Pato Video */}
-   <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2", margin: '10px', textAlign:"center"}}>
+   {/* <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2", margin: '10px', textAlign:"center"}}>
        <Header>Fílipa Páto</Header>
    <Embed
    id='_-Jj8MF2Ruw/1'
     placeholder={'https://img.youtube.com/vi/_-Jj8MF2Ruw/1.jpg'}
     source='youtube'
   />
-  </Segment>
+  </Segment> */}
 
 
      {/* Chenin Video */}

@@ -7,20 +7,20 @@ const Announcement = () => {
         <div style={{marginRight:"30px"}}>
                 <Message
       attached
-      content='WineWise Welcomes Herdade do Mouchão!'
+      content='WineWise Welcomes Lacourte-Godbillion!'
       style={{ backgroundColor:"#fcfbf2", fontSize:"1.2em", textAlign:"center"}}
     />
             <Segment className='attached fluid segment' style={{backgroundColor:"#fcfbf2"}}>
                 <Grid columns={1} >
                     <Grid.Column >
                         <Grid.Row>
-                            <Image src="../../images/group/PMO.png" size="medium" centered></Image>
+                            <Image src="../../images/group/KLG.png" size="medium" centered></Image>
                         <p style={{ textAlign:"left", fontSize:"1.1em", marginTop:"10px"}}>
-                        It is no exaggeration to say that we have been interested in this great estate since we began importing from Portugal over a decade ago. However, we were only recently able to taste their wines and connect the dots between the press accolades, their iconic status in Portugal and the wines themselves. It turns out that the oldest active winery in the Alentejo, beloved of luminaries as diverse as Jancis Robinson, Sarah Ahmed and Hugh Johnson, makes not just the world-class reds we were hoping to find, but stunning, seriously age-worthy whites as well.
-                         </p>
+                        on it for some time now. Géraldine Lacourte and her husband Richard Desvignes took it over from her parents in 2007. They left the co-op in 2012, began an organic conversion in 2017 (certified since 2020) and are now almost finished with the further conversion to biodynamic viticulture. They present a compelling range of wines designed to showcase the surprisingly myriad possibilities offered by their 1er Cru vineyards in Écueil (which is coincidentally the home of Gracianne Marié, of Forest-Marié). The house-style might be described as extroverted, with most of the wines revelling in their generous fruit endowment and effortlessly supporting their prevalent dryness. 
+                        </p>
                         <div style={{textAlign: 'center'}}>
-                        <Link to= {'/producerdetails/Herdade do Mouchão'}>
-                      <Button style={{textAlign: 'center'}}>View Herdade do Mouchão's Page</Button>
+                        <Link to= {'/producerdetails/Lacourte-Godbillon'}>
+                      <Button style={{textAlign: 'center'}}>View Lacourte-Godbillion's Page</Button>
                       </Link>
                       </div>
                         </Grid.Row>
