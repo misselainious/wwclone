@@ -17,7 +17,7 @@ import OneProducer from "./pages/oneproducer";
 import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
 import Hiram from "./pages/hiram";
-import Greenwood from "./pages/greenwood";
+import Martin from "./pages/martin";
 import EventsTable from "./pages/events";
 import "./App.css";
 
@@ -87,7 +87,7 @@ const PageSwitch = props => {
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/hiram" component={Hiram} />
-      <Route path="/greenwood" component={Greenwood} />
+      <Route path="/martin" component={Martin} />
       <Route path="/login" component={Login}/>
       <Route path="/events" component={EventsTable}/>
       <Route path="*" component={ErrorPage} />
