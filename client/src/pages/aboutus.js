@@ -58,7 +58,7 @@ class AboutUs extends React.Component {
                         className='header'
                         horizontal
                         style={{ color: '#962d2d', margin: '1em 0em', textTransform: 'uppercase' }}>
-                        FOUNDERS
+                        PARTNERS
                     </Divider>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>

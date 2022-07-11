@@ -16,7 +16,7 @@ const Martin = () => (
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            Martin Reyes
+                            Martin Reyes, Partner
                          </Header>
                         
                         <p style={{ fontSize: '1em' }}>
