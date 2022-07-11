@@ -92,7 +92,7 @@ class AboutUs extends React.Component {
 
                                 <Grid.Column floated='right' width={8}>
                                     <Header as='h3' style={{ fontSize: '2em' }}>
-                                        Martin Reyes
+                                        Martin Reyes, Partner
                 </Header>
                                     <p style={{ fontSize: '1.25em' }}>
                                     Martin brings many accolades to the WineWise team including Master of Wine. We look forward to applying his vast knowledge to the portfolio.</p>
