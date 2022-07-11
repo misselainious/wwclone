@@ -95,8 +95,7 @@ class AboutUs extends React.Component {
                                         Martin Reyes
                 </Header>
                                     <p style={{ fontSize: '1.25em' }}>
-                                        Brian helped WineWise grow organically into what it is today though his refreshing outlook on the industry. He keeps the company moving forward and always has great recommendations from his years of experience.
-                                </p>
+                                    Martin brings many accolades to the WineWise team including Master of Wine. We look forward to applying his vast knowledge to the portfolio.</p>
                                 <Link to="/martin">
                                 <Button className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
@@ -109,32 +108,6 @@ class AboutUs extends React.Component {
                     </Segment>
 
 
-                    {/* <Segment style={{ padding: '0em' }} vertical>
-                        <Grid celled='internally' columns='equal' stackable>
-                            <Grid.Row textAlign='center'>
-                                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                                    <Header as='h3' style={{ fontSize: '2em' }}>
-                                        Primary Contacts
-                </Header>
-                                    <p style={{ fontSize: '1.33em' }}>Hiram Simon • hiram@winewise.biz • 510.848.6879
-                            <br />
-                                        Brian Greenwood • brian@winewise.biz • 510.524.2270
-                            </p>
-                                </Grid.Column>
-                                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                                    <Header as='h3' style={{ fontSize: '2em' }}>
-                                        Order Desk
-                </Header>
-                                    <p style={{ fontSize: '1.33em' }}>
-                                     
-                                        orders@winewise.biz • 510.473.5482
-                                    <br />
-                                        <Image avatar src='./images/winecorks.jpg' />
-                                    </p>
-                                </Grid.Column>
-                            </Grid.Row>
-                        </Grid>
-                    </Segment> */}
 
 
                     <TeamMembersContainer handleOpenModal={this.handleOpenModal} />
