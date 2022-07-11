@@ -87,17 +87,17 @@ class AboutUs extends React.Component {
                         <Grid container stackable verticalAlign='middle'>
                             <Grid.Row>
                                 <Grid.Column floated='left' width={6}>
-                                    <Image className="modalImageSize" bordered rounded size='medium' src='/images/BrianGreenwood.jpg' />
+                                    <Image className="modalImageSize" bordered rounded size='medium' src='/images/Martin.jpg' />
                                 </Grid.Column>
 
                                 <Grid.Column floated='right' width={8}>
                                     <Header as='h3' style={{ fontSize: '2em' }}>
-                                        Brian Greenwood, Principal
+                                        Martin Reyes
                 </Header>
                                     <p style={{ fontSize: '1.25em' }}>
                                         Brian helped WineWise grow organically into what it is today though his refreshing outlook on the industry. He keeps the company moving forward and always has great recommendations from his years of experience.
                                 </p>
-                                <Link to="/greenwood">
+                                <Link to="/martin">
                                 <Button className="seeAllWinesBtn" size='small'>
                                     <p className="seeAllWinesText">Read More</p>
                                 </Button>
