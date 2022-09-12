@@ -25,8 +25,9 @@ const Announcement2 = () => {
                        <p style={{ textAlign:"center", fontSize:"1.8em", color:"#ce633a"}}> We thank you for your understanding and continued support.</p> 
 
                       <List bulleted style={{ textAlign: "center", fontSize: "1.2em", color:"#202428"}}>
-                          <List.Item>1 case deliveries - $15 surcharge</List.Item>
-                          <List.Item>2 case deliveries - $10 surcharge</List.Item>
+                          <List.Item>3 case deliveries - $10 surcharge</List.Item>
+                          <List.Item>2 case deliveries - $15 surcharge</List.Item>
+                          <List.Item>1 case deliveries - $20 surcharge</List.Item>
                       </List>
                       
                        <br />
