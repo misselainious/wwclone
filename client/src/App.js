@@ -6,6 +6,7 @@ import AllWines from "./pages/allwines";
 import Sort from "./pages/sort";
 import Admin from "./pages/admin";
 import Producers from "./pages/producers";
+import FemaleProducers from "./pages/femaleProducers";
 import AboutUs from "./pages/aboutus";
 import Login from "./pages/login";
 import AuthService from './components/login/AuthService';
@@ -84,6 +85,7 @@ const PageSwitch = props => {
       <PrivateRoute path="/admin" component={Admin} />
       <Route path="/details/:id" key={window.location.pathname} component={OneWine} />
       <Route path="/producers" component={Producers} />
+      <Route path="/femaleproducers" component={FemaleProducers} />
       <Route path="/producerdetails/:id" component={OneProducer} />
       <Route path="/aboutus" component={AboutUs} />
       <Route path="/hiram" component={Hiram} />

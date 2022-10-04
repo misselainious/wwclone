@@ -1,9 +1,10 @@
 import React, { Component, createRef } from "react";
 // import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
-import { Grid, Card, Header, Segment, Dimmer, Loader } from "semantic-ui-react";
+import { Grid, Card, Header, Button, Dimmer, Loader, Icon } from "semantic-ui-react";
 import Producercard from "../components/ProducerCard";
 import CountryDropdown from "../components/CountryDropdown/countryDropdown";
+import { Link } from "react-router-dom";
 
 
 class Producers extends Component {
@@ -35,13 +36,15 @@ contextRef = createRef()
 
   
 render() {
-  let champagne = this.state.Producers.filter(p => p.Region === "Champagne");
+let champagne = this.state.Producers.filter(p => p.Region === "Champagne");
  let france = this.state.Producers.filter(p => (p.Country === "France" && p.Region != "Champagne"));
  let spain = this.state.Producers.filter(p => p.Country === "Spain");
  let portugal = this.state.Producers.filter(p => p.Country === "Portugal");
  let greece = this.state.Producers.filter(p => p.Country === "Greece");
  let germany = this.state.Producers.filter(p => p.Country === "Germany");
  let austria = this.state.Producers.filter(p => p.Country === "Austria");
+
+ let femaleProducer = this.state.Producers.filter(p=> p.Female === "Female Winemaker");
 
  // Function sorts each country by the 'Order' Column, because it is not necessarily alphabetical.
  function compare(a,b){
@@ -79,6 +82,30 @@ render() {
     </Grid.Column>
         </Grid.Row>
 
+
+         {/* Female Winemakers Link */}
+    <Grid.Row  style={{backgroundColor:'#b8abb8'}}>
+      <Grid.Column width={11}>
+        <center>
+        
+      <Link to={"/femaleProducers/"}>
+      <Button animated='vertical'>
+      <Button.Content visible>Check out our list female winemakers here!</Button.Content>
+     
+      <Button.Content hidden> 
+      <Icon name='female' />
+      This way to the ladies' room
+        <Icon name='right arrow' />
+      </Button.Content>
+    </Button>
+    
+       
+        </Link>
+        </center>
+      </Grid.Column>
+    </Grid.Row>
+
+
     <Grid.Row>
       <Grid.Column width={11}>
     <center>
@@ -87,8 +114,9 @@ render() {
       </p>
               {/* <SearchProducers /> */}
             </center>
-            </Grid.Column> 
+      </Grid.Column> 
     </Grid.Row>
+
 
       <CountryDropdown />
       
@@ -103,6 +131,8 @@ render() {
 : (
   <Grid centered>
 
+
+   
      {/* Champange */}
      <Grid.Row id='champagne' style={{backgroundColor:'#e6e6d2'}}>
   <Grid.Column style={{backgroundColor:'#e6e6d2'}}>
