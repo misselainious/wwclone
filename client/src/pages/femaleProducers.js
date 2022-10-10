@@ -1,7 +1,7 @@
 import React, { Component, createRef } from "react";
 // import CheckboxSidebar from "../components/CheckboxSidebar/CheckboxSidebar";
 import API from "../utils/API";
-import { Grid, Card, Header, Segment, Dimmer, Loader } from "semantic-ui-react";
+import { Grid, Card, Header, Dimmer, Loader } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Producercard from "../components/ProducerCard";
 
@@ -36,39 +36,9 @@ contextRef = createRef()
 
   
 render() {
-let champagne = this.state.Producers.filter(p => p.Region === "Champagne");
- let france = this.state.Producers.filter(p => (p.Country === "France" && p.Region != "Champagne"));
- let spain = this.state.Producers.filter(p => p.Country === "Spain");
- let portugal = this.state.Producers.filter(p => p.Country === "Portugal");
- let greece = this.state.Producers.filter(p => p.Country === "Greece");
- let germany = this.state.Producers.filter(p => p.Country === "Germany");
- let austria = this.state.Producers.filter(p => p.Country === "Austria");
+
 
  let femaleProducer = this.state.Producers.filter(p=> p.Female === "Female Winemaker");
-
- // Function sorts each country by the 'Order' Column, because it is not necessarily alphabetical.
- function compare(a,b){
-   const numA = a.Order;
-   const numB = b.Order;
-
-   let comparison = 0;
-   if(numA > numB){
-     comparison = 1;
-   } else if (numA < numB){
-     comparison = -1
-   }
-   return comparison
- }
- champagne = champagne.sort(compare);
- france = france.sort(compare);
- spain = spain.sort(compare);
- portugal = portugal.sort(compare);
- greece = greece.sort(compare);
- germany = germany.sort(compare);
- austria = austria.sort(compare);
-
- 
-
 
 
     return (

@@ -94,7 +94,7 @@ let champagne = this.state.Producers.filter(p => p.Region === "Champagne");
      
       <Button.Content hidden> 
       <Icon name='female' />
-      This way to the ladies' room
+      This way to the ladies' room 
         <Icon name='right arrow' />
       </Button.Content>
     </Button>
