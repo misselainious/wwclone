@@ -194,7 +194,7 @@ const Home = () => (
 
 
  <Grid.Row>
-   <Grid.Column width={6}>
+   <Grid.Column width={10}>
    <Announcement />
    </Grid.Column>
  </Grid.Row>
