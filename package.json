@@ -27,7 +27,7 @@
     "express-jwt": "^5.3.3",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^7.4.3",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "mongodb": "^3.7.3",
     "mongoose": "^5.13.13",
     "react": "^16.14.0",
