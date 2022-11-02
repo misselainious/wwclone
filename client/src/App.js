@@ -19,6 +19,7 @@ import OtherHeading from "./components/Homepage/HomeHeading/OtherHeading";
 import ErrorPage from "./pages/errorpage";
 import Hiram from "./pages/hiram";
 import Martin from "./pages/martin";
+import Secret from "./pages/secret";
 import EventsTable from "./pages/events";
 import "./App.css";
 
@@ -92,6 +93,7 @@ const PageSwitch = props => {
       <Route path="/martin" component={Martin} />
       <Route path="/login" component={Login}/>
       <Route path="/events" component={EventsTable}/>
+      <Route path="/secret" component={Secret}/>
       <Route path="*" component={ErrorPage} />
     </Switch>
   )
