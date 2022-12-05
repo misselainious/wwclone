@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "engines": {
-    "node": "16.16.0"
+    "node": "18.x"
   },
   "dependencies": {
     "jwt-decode": "^2.2.0",
