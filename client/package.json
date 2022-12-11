@@ -5,7 +5,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "engines": {
-    "node": "18.x"
+    "node": "16.16.0"
   },
   "dependencies": {
     "jwt-decode": "^2.2.0",
@@ -13,12 +13,12 @@
     "react-dom": "^16.8.3",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "^3.4.1",
     "semantic-ui-react": "^0.85.0"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
